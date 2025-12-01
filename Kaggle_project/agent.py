@@ -6,7 +6,7 @@ from google.adk.agents import LlmAgent, SequentialAgent, ParallelAgent, Agent
 from google.adk.tools import FunctionTool
 from google.adk.sessions import InMemorySessionService
 LLM_MODEL = "gemini-2.5-flash-preview-09-2025"
-GOOGLE_API_KEY = "AIzaSyDGfC8cpl6deriuHgTkaahWO7_mhMc4BX4"
+GOOGLE_API_KEY = ""
 
 def search_clinical_literature(query: str, max_results: int = 5) -> List[Dict]:
     """
@@ -152,7 +152,7 @@ root_agent = Agent(
 )
 if __name__ == "__main__":
     from google.adk.runners import Runner
-    GOOGLE_API_KEY = "AIzaSyDGfC8cpl6deriuHgTkaahWO7_mhMc4BX4"
+    GOOGLE_API_KEY = ""
     
     if GOOGLE_API_KEY == "":
         print("🚨 SETUP WARNING: Please set your Gemini API key in the ADK environment.")
